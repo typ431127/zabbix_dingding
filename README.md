@@ -82,3 +82,14 @@ chown zabbix:zabbix /tmp/zabbix_dingding.log
 cat /tmp/zabbix_dingding.log
 ```
 ![image](http://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/13.png)
+
+### QQ:1500698928
+### 个人微信
+![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/14.jpg)
+
+### 问题调试方法
+如果你的微信收不到消息可以使用以下方法进行调试
+命令行调试脚本
+```
+python3 zabbix_weixin_kaping.py 你的企业号用户名 1 测试
+```
