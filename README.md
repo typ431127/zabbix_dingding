@@ -91,5 +91,5 @@ cat /tmp/zabbix_dingding.log
 如果你的微信收不到消息可以使用以下方法进行调试
 命令行调试脚本
 ```
-python3 zabbix_weixin_kaping.py 你的企业号用户名 1 测试
+python3 zabbix_dingding.py 1 2 3
 ```
