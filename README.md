@@ -1,6 +1,6 @@
 ### 环境要求
 
-#### python3 zabbix 3.4 dingding
+#### python2.x python3.x zabbix 2.x 版本以上 dingding
 ##### 我刚刚学习python没多久，写的不是很好大神勿喷n(*≧▽≦*)n
 个人博客
 https://www.aityp.com
