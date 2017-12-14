@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Author:   typ431127@gmail.com
 # My blog https://www.aityp.com
