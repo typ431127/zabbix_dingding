@@ -92,7 +92,7 @@ cat /tmp/zabbix_dingding.log
 
 ### QQ:1500698928
 ### 个人微信
-![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/14.jpg)
+![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/14.jpg?x-oss-process=image/resize,h_600)
 
 ### 问题调试方法
 如果你的微信收不到消息可以使用以下方法进行调试
