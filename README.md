@@ -88,7 +88,11 @@ chown zabbix:zabbix /tmp/zabbix_dingding.log
 ```
 cat /tmp/zabbix_dingding.log
 ```
-![image](http://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/13.png)
+![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/13.png)
+![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/14.png)
+### 可以根据错误码解决问题,错误码说明
+https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7386797.0.0.qt4Lrj&source=search&treeId=385&articleId=104965&docType=1
+
 
 ### QQ:1500698928
 ### 个人微信
