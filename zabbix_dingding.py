@@ -43,12 +43,13 @@ def msg(text,user):
         }
     }
 
-    r=requests.post(api_url,data=json.dumps(json_text),headers=headers)
-    code=json.loads(r.content.decode())
-    if code["errcode"] == 0:
-        log(time + ":消息发送成功\n")
+    r=requests.post(api_url,data=json.dumps(json_text),headers=headers).json()
+    code = r["errcode"]
+    if code == 0:
+        log(time + ":消息发送成功 返回码:" + str(code) + "\n")
     else:
-        log(time + ":消息发送失败" + r.content.decode("utf-8") + "\n")
+        log(time + ":消息发送失败 返回码:" + str(code) + "\n")
+        exit(3)
 
 if __name__ == '__main__':
     text = sys.argv[3]
