@@ -1,12 +1,12 @@
 ### 环境要求
 
 #### python2.x python3.x zabbix 2.x 版本以上 dingding
-##### 我刚刚学习python没多久，写的不是很好大神勿喷n(*≧▽≦*)n
-个人博客
+##### 我刚刚学习python没多久，写的不是很好大神勿喷 😶😶😶
+### 个人博客
 https://www.aityp.com
 
 ---
-### 效果图
+### 效果图🐐
 
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/1.png)
 
