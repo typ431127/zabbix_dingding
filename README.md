@@ -15,12 +15,17 @@ https://www.aityp.com
 ```
 ln -s python3 /usr/bin/python3
 ```
-### 安装configparser模块
+### 安装configparser模块(需要PIP没有可以看下面安装)
 ```
 #python2.x
 pip install configparser
 #python3.x
 pip3 install configparser
+```
+### 安装pip
+```
+cd pip_install
+python get-pip.py
 ```
 ### 钉钉配置
 需要新建一个钉钉群，群里面添加一个机器人即可。
