@@ -15,12 +15,15 @@ https://www.aityp.com
 ```
 ln -s python3 /usr/bin/python3
 ```
-### 安装configparser模块(需要PIP没有可以看下面安装)
+### 安装configparser requests模块(需要PIP没有可以看下面安装)
 ```
 #python2.x
 pip install configparser
+pip install requests
+
 #python3.x
 pip3 install configparser
+pip3 install requests
 ```
 ### 安装pip
 ```
