@@ -11,7 +11,7 @@ import time
 import configparser
 
 headers = {'Content-Type': 'application/json'}
-time=Time=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+time=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 config=configparser.ConfigParser()
 config.read('/etc/zabbix/dingding.conf')
