@@ -14,35 +14,24 @@ headers = {'Content-Type': 'application/json'}
 time=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 config=configparser.ConfigParser()
-config.read('/etc/zabbix/dingding.conf')
-
-log_file = config.get('config','log')
+config.read('/etc/zabbix/dingding.conf',encoding='utf-8')
+log_dir = config.get('config','log_dir')
+log_file = config.get('config','log_file')
 api_url = config.get('config','webhook')
-
 
 def log(info):
     #注意权限,否则写不进去日志
-    if os.path.isfile(log_file) == False:
-               f = open(log_file, 'a+')
-
-    f = open(log_file,'a+')
+    file_path=log_dir + log_file
+    if os.path.isdir(log_dir) == False:
+        os.makedirs(log_dir)
+    elif os.path.isfile(file_path) == False:
+        f = open(file_path, 'a+')
+    f = open(file_path,'a+')
     f.write(info)
     f.close()
 
 def msg(text,user):
-    json_text= {
-     "msgtype": "text",
-        "text": {
-            "content": text
-        },
-        "at": {
-            "atMobiles": [
-                user
-            ],
-            "isAtAll": False
-        }
-    }
-
+    json_text= {"msgtype": "text","text": {"content": text},"at": {"atMobiles": [user],"isAtAll": False}}
     r=requests.post(api_url,data=json.dumps(json_text),headers=headers).json()
     code = r["errcode"]
     if code == 0:
