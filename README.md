@@ -94,7 +94,7 @@ chown zabbix:zabbix /tmp/zabbix_dingding.log
 
 ### 日志调试
 ```
-cat /tmp/zabbix_dingding.log
+cat /data/logs/zabbix/zabbix_dingding.log
 ```
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/13.png)
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/14.png)
