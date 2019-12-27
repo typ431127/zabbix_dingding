@@ -15,6 +15,7 @@ https://www.aityp.com
 |---|---|
 |zabbix_dingding.py| 机器人安全配置为网段
 |zabbix_dingding_sign.py|机器人安全配置为加签(推荐)
+推荐使用签名验证版本,更安全
 ### python配置
 你的python3最好在`/usr/bin`下面，否则会找不到
 ```
@@ -105,7 +106,7 @@ chown zabbix:zabbix /tmp/zabbix_dingding.log
 cat /data/logs/zabbix/zabbix_dingding.log
 ```
 ![](https://ddn-md.oss-cn-beijing.aliyuncs.com/images/md/2019/12/27/20191227170123.png)
-
+图中所示错误为签名验证key错误,这个时候自行检查dingding.conf中secret配置是否与钉钉机器人中的key一样。
 
 ### QQ:1500698928
 ### 个人微信
