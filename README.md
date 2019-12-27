@@ -42,12 +42,11 @@ python get-pip.py
 
 #### 添加自定义机器人
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/3.png)
-#### 设置好后记住`webhook`后面会用到
+#### 设置机器人,记住`webhook`后面会用到
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/4.png)
-#### 记住webhook后面配置文件会用到! ! ! 安全配置选择加签
+#### webhook后面配置文件会用到! ! ! 安全配置选择加签
 ![](https://ddn-md.oss-cn-beijing.aliyuncs.com/images/md/2019/12/27/20191227163140.png)
 ----
-### zabbix配置
 
 #### pull代码
 ```
@@ -66,7 +65,8 @@ mv dingding.conf /etc/zabbix/
 ```
 [config]
 #此文件注意权限
-log=/tmp/zabbix_dingding.log
+log_dir=/data/logs/zabbix/
+log_file=zabbix_dingding.log
 #配置图片实例,https://img.alicdn.com/top/i1/LB1lIUlPFXXXXbGXFXXXXXXXXXX
 webhook=https://oapi.dingtalk.com/robot/send?access_token=
 secret=
@@ -105,8 +105,6 @@ chown zabbix:zabbix /tmp/zabbix_dingding.log
 cat /data/logs/zabbix/zabbix_dingding.log
 ```
 ![](https://ddn-md.oss-cn-beijing.aliyuncs.com/images/md/2019/12/27/20191227170123.png)
-### 可以根据错误码解决问题,错误码说明
-[错误码查询传送门](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7386797.0.0.qt4Lrj&source=search&treeId=385&articleId=104965&docType=1)
 
 
 ### QQ:1500698928
@@ -114,7 +112,7 @@ cat /data/logs/zabbix/zabbix_dingding.log
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/14.jpg?x-oss-process=image/resize,h_600)
 
 ### 问题调试方法
-如果你的微信收不到消息可以使用以下方法进行调试
+如果你的钉钉收不到消息可以使用以下方法进行调试
 命令行调试脚本
 ```
 python3 zabbix_dingding.py 1 2 3
