@@ -10,6 +10,11 @@ https://www.aityp.com
 
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/1.png)
 
+### 版本选择
+|文件|说明
+|---|---|
+|zabbix_dingding.py| 机器人安全配置为网段
+|zabbix_dingding_sign.py|机器人安全配置为加签(推荐)
 ### python配置
 你的python3最好在`/usr/bin`下面，否则会找不到
 ```
@@ -39,7 +44,8 @@ python get-pip.py
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/3.png)
 #### 设置好后记住`webhook`后面会用到
 ![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/4.png)
-#### 记住webhook后面配置文件会用到! ! !
+#### 记住webhook后面配置文件会用到! ! ! 安全配置选择加签
+![](https://ddn-md.oss-cn-beijing.aliyuncs.com/images/md/2019/12/27/20191227163140.png)
 ----
 ### zabbix配置
 
@@ -56,15 +62,17 @@ mv dingding.conf /etc/zabbix/
 ```
 #### 编辑配置文件
 `/etc/zabbix/dingding.conf`
-![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/5.png)
+![](https://ddn-md.oss-cn-beijing.aliyuncs.com/images/md/2019/12/27/20191227165920.png)
 ```
 [config]
 #此文件注意权限
 log=/tmp/zabbix_dingding.log
 #配置图片实例,https://img.alicdn.com/top/i1/LB1lIUlPFXXXXbGXFXXXXXXXXXX
 webhook=https://oapi.dingtalk.com/robot/send?access_token=
+secret=
 ```
->log目录不用动,webhook是你新建机器人的url，复制粘贴即可,这一步很重要.
+- `webhook`是你新建机器人webhook，复制粘贴即可,这一步很重要.
+- `secret`是安全设置里面加签的key,复制粘贴即可
 
 #### 配置报警脚本
 把`zabbix_dingding.py`放到你`zabbix_server`的`scripts`目录下面即可.
@@ -96,8 +104,7 @@ chown zabbix:zabbix /tmp/zabbix_dingding.log
 ```
 cat /data/logs/zabbix/zabbix_dingding.log
 ```
-![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/13.png)
-![image](https://typ.oss-cn-shanghai.aliyuncs.com/markdown/2017/10/29/14.png)
+![](https://ddn-md.oss-cn-beijing.aliyuncs.com/images/md/2019/12/27/20191227170123.png)
 ### 可以根据错误码解决问题,错误码说明
 [错误码查询传送门](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7386797.0.0.qt4Lrj&source=search&treeId=385&articleId=104965&docType=1)
 
