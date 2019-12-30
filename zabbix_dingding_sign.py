@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # My blog https://www.aityp.com
 # 此版本需要配置签名验证,只支持python3.x

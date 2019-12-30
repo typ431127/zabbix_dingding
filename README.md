@@ -14,7 +14,7 @@ https://www.aityp.com
 |文件|说明
 |---|---|
 |zabbix_dingding.py| 机器人安全配置为网段
-|zabbix_dingding_sign.py|机器人安全配置为加签(推荐)
+|zabbix_dingding_sign.py|机器人安全配置为加签(推荐) 使用python3
 推荐使用签名验证版本,更安全
 ### python配置
 你的python3最好在`/usr/bin`下面，否则会找不到
